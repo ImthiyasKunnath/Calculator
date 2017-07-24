@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baabtra.calculatorbasic.MainActivity">
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seven"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="number"
+        android:gravity="center_vertical"
+        android:text="0"/>
+
+    <Button
+        android:textSize="30dp"
+        android:id="@+id/seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/five"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorAccent"
+        android:text="7"
+        android:onClick="numberClicked"/>
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/eight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:onClick="numberClicked"
+        android:layout_alignBaseline="@+id/seven"
+        android:layout_alignBottom="@+id/seven"
+        android:layout_toEndOf="@+id/seven" />
+
+    <Button
+        android:textSize="30dp"
+        android:onClick="numberClicked"
+        android:background="@color/colorAccent"
+        android:id="@+id/nine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:layout_alignBottom="@+id/eight"
+        android:layout_toEndOf="@+id/eight"
+        android:layout_alignTop="@+id/eight" />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/mul"
+        android:onClick="operatorClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nine"
+        android:layout_alignBottom="@+id/nine"
+        android:layout_alignParentEnd="true"
+        android:text="x"
+        android:layout_toEndOf="@+id/nine" />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/four"
+        android:onClick="numberClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:layout_alignBaseline="@+id/five"
+        android:layout_alignBottom="@+id/five"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:onClick="numberClicked"
+        android:textSize="30dp"
+
+        android:background="@color/colorAccent"
+        android:id="@+id/five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/six" />
+
+    <Button
+        android:textSize="30dp"
+        android:onClick="numberClicked"
+        android:id="@+id/six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/five"
+        android:layout_alignBottom="@+id/five"
+        android:layout_alignStart="@+id/nine"
+        android:background="@color/colorAccent"
+        android:text="6" />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/sub"
+        android:onClick="operatorClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/six"
+        android:layout_alignBottom="@+id/six"
+        android:text="-"
+        android:layout_alignStart="@+id/mul"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:onClick="numberClicked"
+        android:layout_below="@+id/four"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:textSize="30dp"
+        android:onClick="numberClicked"
+        android:background="@color/colorAccent"
+        android:id="@+id/two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/five"
+        android:layout_alignTop="@+id/one"
+        android:text="2" />
+
+    <Button
+        android:textSize="30dp"
+        android:onClick="numberClicked"
+        android:background="@color/colorAccent"
+        android:id="@+id/three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:layout_alignBaseline="@+id/two"
+        android:layout_alignBottom="@+id/two"
+        android:layout_toEndOf="@+id/two" />
+
+    <Button
+        android:onClick="numberClicked"
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp"
+        android:text="0"
+        android:layout_below="@+id/one" />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/zero"
+        android:layout_alignStart="@+id/two"
+        android:layout_below="@+id/two"
+        android:text="." />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dot"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/three"
+        android:layout_toEndOf="@+id/dot"
+        android:text="="
+        android:onClick="equalTO"/>
+
+    <Button
+        android:textSize="30dp"
+        android:onClick="operatorClicked"
+        android:background="@color/colorAccent"
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/equal"
+        android:layout_alignStart="@+id/sub"
+        android:text="+"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/seven"
+        android:text="c"
+        android:onClick="clearfunction"
+        android:layout_above="@+id/eight" />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/eight"
+        android:layout_alignTop="@+id/c"
+        android:text="DEL" />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/mod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/del"
+        android:layout_alignBottom="@+id/del"
+        android:layout_toEndOf="@+id/del"
+        android:text="%"
+        android:onClick="operatorClicked" />
+
+    <Button
+        android:textSize="30dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mod"
+        android:layout_alignParentEnd="true"
+        android:text="/"
+        android:onClick="operatorClicked"
+        android:layout_toEndOf="@+id/nine" />
+</RelativeLayout>
